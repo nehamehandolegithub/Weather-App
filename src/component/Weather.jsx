@@ -36,7 +36,7 @@ const Weather = () => {
             <div className="flex justify-center item-center">
                 <div className="flex items-center flex-col border border-rose-500 w-[30rem] rounded-md h-[100%] p-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ...">
                     <div className="flex justify-center item-center gap-4">
-                        <input input="text" placeholder="search....." className="border-[1px] py-2 pl-5 rounded-full w-[300px] bg-purple-400 outline-0 text-[20px] placeholder:text-gray-500" ref={inputRef} onChange={inputEvent} />
+                        <input input="text" placeholder="search....." className="border-[1px] py-2 pl-5 rounded-full md:w-[310px] w-[240px] bg-purple-400 outline-0 text-[20px] placeholder:text-gray-500" ref={inputRef} onChange={inputEvent} />
                         <img src={search} alt="search" className="bg-purple-400 border-[1px] text-black p-4 rounded-full cursor-pointer w-12 " onClick={getData} />
                     </div>
                     {fetchdata ? (
@@ -44,7 +44,7 @@ const Weather = () => {
                             <p className="mt-6 text-[25px] text-[#6e046e]">City : <span className="text-rose-700">{fetchdata.name}, {fetchdata.sys.country}</span></p>
                             <p className="text-[40px] mt-5 text-slate-800">{fetchdata.main.temp}<span>°C</span></p>
 
-                            <div className="flex justify-between gap-24 w-[100%] mt-10">
+                            <div className="flex justify-between md:gap-24 gap-10 w-[100%] mt-10">
                                 <div className="flex items-start text-[20px] gap-3">
                                     <img src={humidity} alt="humidityicon" className="mt-2" />
                                     <div>
@@ -53,7 +53,7 @@ const Weather = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-start text-[20px] gap-3">
-                                    <img src={wind} alt="humidityicon" className="mt-2" />
+                                    <img src={wind} alt="windicon" className="mt-2" />
                                     <div>
                                         <p>{fetchdata.wind.speed} km/h</p>
                                         <span className="text-[18px] text-rose-700">Wind Speed</span>
